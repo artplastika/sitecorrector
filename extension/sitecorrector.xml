@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+    <name>com_sitecorrector</name>
+    <creationDate>2015-11-18</creationDate>
+    <copyright>(C) 2015 Victor Glushenkov (http://artplastika.ru)</copyright>
+    <license>GNU General Public License version 3, or later. See LICENSE.txt</license>
+    <author>Victor Glushenkov</author>
+    <authorEmail>dev@artplastika.ru</authorEmail>
+    <authorUrl>http://artplastika.ru</authorUrl>
+    <version>15.11.21</version>
+    <description>Site Corrector component for Joomla — lets your site readers report about text mistakes and typos</description>
+    
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>sitecorrector.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+        <folder>views</folder>
+        <folder>models</folder>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+        <folder>assets</folder>
+    </files>
+    <languages folder="languages/site">
+        
+			<language tag="en-GB">en-GB/en-GB.com_sitecorrector.ini</language>
+			<language tag="ru-RU">ru-RU/ru-RU.com_sitecorrector.ini</language>
+    </languages>
+    <administration>
+        
+        <submenu>
+            
+        </submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>sitecorrector.php</filename>
+            <folder>controllers</folder>
+            <folder>assets</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="languages/administrator">
+            
+			<language tag="en-GB">en-GB/en-GB.com_sitecorrector.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_sitecorrector.sys.ini</language>
+			<language tag="ru-RU">ru-RU/ru-RU.com_sitecorrector.ini</language>
+			<language tag="ru-RU">ru-RU/ru-RU.com_sitecorrector.sys.ini</language>
+        </languages>
+    </administration>
+    <plugins>
+        <plugin group="search" plugin="sitecorrector"/>
+    </plugins>
+    
+</extension>
